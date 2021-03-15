@@ -1,38 +1,160 @@
-.App {
-  text-align: center;
+.CustomWrapper {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: absolute;
+    box-sizing: border-box;
+    user-select: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.item {
+    position: relative;
+    width: 300px;
+    height: 100px;
+    pointer-events: auto;
+    transform-origin: 50% 50% 0px;
+    padding-left: 32px;
+    padding-right: 32px;
+    box-sizing: border-box;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fg {
+    cursor: -webkit-grab;
+    background-color: #272727;
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.2);
+    font-size: 3em;
+    font-weight: 600;
+    transition: box-shadow 0.75s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.fg:active {
+    cursor: -webkit-grabbing;
+    box-shadow: 0px 15px 30px -5px rgba(0, 0, 0, 0.4);
 }
 
-.App-link {
-  color: #61dafb;
+.fg>* {
+    pointer-events: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.av {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.drag-main {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    cursor: -webkit-grab;
+    user-select: none;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    background-size: 100% auto;
+    top: 0;
+}
+
+.listitems {
+    position: relative;
+    width: 320px;
+    height: 240px;
+}
+
+.listitems>div {
+    position: absolute;
+    width: 320px;
+    height: 90px;
+    overflow: visible;
+    pointer-events: auto;
+    transform-origin: 50% 50% 0px;
+    border-radius: 5px;
+    color: white;
+    line-height: 90px;
+    padding-left: 32px;
+    font-size: 14.5px;
+    cursor: -webkit-grab;
+    background: lightblue;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.listitems>div:nth-child(1) {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+
+.listitems>div:nth-child(2) {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.listitems>div:nth-child(3) {
+    background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);
+}
+
+.listitems>div:nth-child(4) {
+    background: linear-gradient(135deg, #c3cfe2 0%, #c3cfe2 100%);
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+}
+
+.card {
+    cursor: -webkit-grab;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    font-size: 35px;
+    font-weight: 600;
+    font-style: normal;
+    font-family: 'Agency FB', Arial;
+    align-items: center;
+    text-align: center;
+    color: black;
+    position: relative;
+}
+
+#responsive-navbar-nav {
+    font-size: 35px;
+    font-weight: 600;
+    font-style: normal;
+    font-family: 'Agency FB', Arial;
+    position: relative;
+}
+
+#links {
+    color: black;
+}
+
+#links:hover {
+    color: red;
+}
+
+.content {
+    min-height: 70%;
+    position: relative;
 }
