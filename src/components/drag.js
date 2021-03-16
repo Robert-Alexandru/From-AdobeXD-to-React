@@ -1,3 +1,5 @@
+//Taken from: https://codesandbox.io/embed/r5qmj8m6lq
+
 import React, { useRef } from 'react';
 import clamp from 'lodash-es/clamp';
 import { useGesture } from 'react-use-gesture';

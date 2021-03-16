@@ -8,6 +8,7 @@
         "@testing-library/user-event": "^12.8.3",
         "bootstrap": "^4.6.0",
         "browser-sync": "^2.26.14",
+        "framer-motion": "^3.10.5",
         "lodash": "^4.17.21",
         "lodash-move": "^1.1.1",
         "react": "^17.0.1",

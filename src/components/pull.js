@@ -1,7 +1,8 @@
+//Inspired by https://codesandbox.io/embed/r24mzvo3q
+
 import React from 'react';
 import { Container,  Row, Col } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card'
-import Navigation from './navbar';
 import clamp from 'lodash-es/clamp'
 import { useSpring, animated } from 'react-spring'
 import { useGesture } from 'react-with-gesture'
@@ -14,14 +15,13 @@ function Pull(){
     })    
     return (
 		<Container>
-			<Navigation />
 				<Row>
 					<Col md={{ span: 4, offset: 4 }}>
                     <animated.div {...bind()} style={{ transform: xy.interpolate((x, y) => `translate3d(${x}px,${y}px,0)`) }}>
-						<Card>
+						<Card className="pullcard">
 							<Card.Img variant="top" src="https://picsum.photos/id/1024/400"/>
-							<Card.Body>
-								<Card.Title>"Pull Gesture" </Card.Title>
+							<Card.Body className="cardbody">
+								<Card.Title>"Pull Gesture"</Card.Title>
 								<Card.Text> This card can be pulled from its place, on click release, it will return to its initial poisition</Card.Text>
 							</Card.Body>
 						</Card>
