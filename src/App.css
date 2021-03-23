@@ -5,6 +5,18 @@
     overflow: auto;
     position: absolute;
     user-select: none;
+    background-color: rgb(194, 222, 208);
+}
+
+.story2Btn {
+    background-color: white !important;
+    border-color: rgba(255, 255, 255, 0)!important;
+    margin-top: 20px;
+}
+
+.storyBtn {
+    background-color: rgba(255, 255, 255, 0)!important;
+    border-color: rgba(255, 255, 255, 0)!important;
 }
 
 .carousel {
@@ -49,7 +61,7 @@
     left: 10px;
 }
 
-img {
+#motion-image {
     position: absolute;
     top: 0;
     left: 0;
@@ -113,7 +125,7 @@ img {
     overflow: hidden;
     cursor: -webkit-grab;
     user-select: none;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Century Gothic';
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,14 +186,19 @@ img {
 
 .cardbody {
     position: relative;
-    color: white;
+    color: black;
+}
+
+.audiocardbody {
+    color: black;
+    position: relative;
 }
 
 .footer {
     font-size: 35px;
     font-weight: 600;
     font-style: normal;
-    font-family: 'Agency FB', Arial;
+    font-family: 'Century Gothic';
     align-items: center;
     text-align: center;
     color: black;
@@ -189,10 +206,10 @@ img {
 }
 
 #responsive-navbar-nav {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 600;
     font-style: normal;
-    font-family: 'Agency FB', Arial;
+    font-family: 'Century Gothic';
     position: relative;
 }
 

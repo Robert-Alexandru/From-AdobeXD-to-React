@@ -19,6 +19,7 @@ class Navigation extends Component {
 						</NavDropdown>
 						<Nav.Link id="links" href="/expandable">Expanding Card</Nav.Link>
                         <Nav.Link id="links" href="/carousels">Carousel</Nav.Link>
+						<Nav.Link id="links" href="/AudioCards">Audio Interactions</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>

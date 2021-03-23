@@ -55,8 +55,9 @@ const swipePower = (offset, velocity) => {
     <Container className="carousel">
      <Row>
         <Col md={12}>
-      <AnimatePresence initial={false} custom={direction}>
+      <AnimatePresence classname="motion-image" initial={false} custom={direction}>
         <motion.img
+          id="motion-image"
           key={page}
           src={images[imageIndex]}
           custom={direction}
@@ -83,10 +84,10 @@ const swipePower = (offset, velocity) => {
         />
       </AnimatePresence>
       <div className="next" onClick={() => paginate(1)}>
-        <img src="https://img.icons8.com/wired/64/000000/circled-right-2.png" alt="arrowf"/>
+        <img  id="motion-image" src="https://img.icons8.com/wired/64/000000/circled-right-2.png" alt="arrowf"/>
       </div>
       <div className="prev" onClick={() => paginate(-1)}>
-        <img src="https://img.icons8.com/wired/64/000000/circled-left-2.png" alt="arrowb"/>
+        <img  id="motion-image" src="https://img.icons8.com/wired/64/000000/circled-left-2.png" alt="arrowb"/>
       </div>
       </Col>
      </Row>

@@ -9,6 +9,7 @@ import Carousels from './components/carousels';
 import Navigation from './components/navbar';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import styled from 'styled-components';
+import AudioCards from './components/audio';
 
 
 const Title = styled.div`
@@ -21,10 +22,10 @@ const Title = styled.div`
       text-align: center;
       letter-spacing: 0.5;
       color: black;
-      font-size: 111.00px;
+      font-size: 100px;
       font-weight: 400;
       font-style: normal;
-      font-family: 'Agency FB', Arial;
+      font-family: 'Century Gothic';
       white-space: pre;`
 
 class App extends React.Component {
@@ -44,7 +45,8 @@ class App extends React.Component {
 										<Route path="/drag" component={Drag} />
 										<Route path="/slide" component={Slide} />
 										<Route path="/expandable" component={Expandable} />
-										<Route path="/carousels" component={Carousels} />	
+										<Route path="/carousels" component={Carousels} />
+										<Route path="/AudioCards" component={AudioCards} />	
 									</Switch>
 									)} />
 							</div>
