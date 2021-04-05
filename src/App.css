@@ -8,6 +8,55 @@
     background-color: rgb(194, 222, 208);
 }
 
+.drag-container1,
+.drag-container2,
+.drag-container3,
+.drag-container4 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+}
+
+.drag-item1 {
+    width: 250px;
+    height: 150px;
+    background: blue;
+    border-radius: inherit;
+}
+
+.drag-item2 {
+    width: 250px;
+    height: 150px;
+    background: black;
+    border-radius: inherit;
+}
+
+.drag-item3 {
+    width: 250px;
+    height: 150px;
+    background: red;
+    border-radius: inherit;
+}
+
+.drag-item4 {
+    width: 250px;
+    height: 150px;
+    background: green;
+    border-radius: inherit;
+}
+
+.drag-item5 {
+    width: 250px;
+    height: 150px;
+    background: yellow;
+    border-radius: inherit;
+}
+
 .story2Btn {
     background-color: white !important;
     border-color: rgba(255, 255, 255, 0)!important;
@@ -117,20 +166,6 @@
     background-color: white;
 }
 
-.drag-main {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    cursor: -webkit-grab;
-    user-select: none;
-    font-family: 'Century Gothic';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .navbar {
     background-size: 100% auto;
     top: 0;
@@ -140,40 +175,6 @@
     position: relative;
     width: 320px;
     height: 240px;
-}
-
-.listitems>div {
-    position: absolute;
-    width: 320px;
-    height: 90px;
-    overflow: visible;
-    pointer-events: auto;
-    transform-origin: 50% 50% 0px;
-    border-radius: 5px;
-    color: white;
-    line-height: 90px;
-    padding-left: 32px;
-    font-size: 14.5px;
-    cursor: -webkit-grab;
-    background: lightblue;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.listitems>div:nth-child(1) {
-    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-}
-
-.listitems>div:nth-child(2) {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-}
-
-.listitems>div:nth-child(3) {
-    background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);
-}
-
-.listitems>div:nth-child(4) {
-    background: linear-gradient(135deg, #c3cfe2 0%, #c3cfe2 100%);
 }
 
 .logo {
