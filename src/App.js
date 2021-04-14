@@ -33,23 +33,21 @@ class App extends React.Component {
 		return (
 			<div className="CustomWrapper">
 				<Router>
-								<Navigation />
-								<Title >
-									 <div>From AdobeXD to React</div>
-								</Title>
-							<div className="content">
-								<Route render={({ location }) => (
-									<Switch location={location}>
-										<Route exact path="/" component={Home} />
-										<Route path="/pull" component={Pull} />
-										<Route path="/drag" component={Drag} />
-										<Route path="/slide" component={Slide} />
-										<Route path="/expandable" component={Expandable} />
-										<Route path="/carousels" component={Carousels} />
-										<Route path="/AudioCards" component={AudioCards} />	
-									</Switch>
-									)} />
-							</div>
+					<Navigation />
+					<Title >
+							<div>From AdobeXD to React</div>
+					</Title>
+					<div className="content">
+						<Switch>
+							<Route exact path="/" component={Home} />
+							<Route path="/pull" component={Pull} />
+							<Route path="/drag" component={Drag} />
+							<Route path="/slide" component={Slide} />
+							<Route path="/expandable" component={Expandable} />
+							<Route path="/carousels" component={Carousels} />
+							<Route path="/AudioCards" component={AudioCards} />	
+						</Switch>
+					</div>
 				</Router>
 				<div className="push"></div>
 				<div className="footer">Footer</div>

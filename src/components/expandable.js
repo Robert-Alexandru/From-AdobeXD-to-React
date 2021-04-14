@@ -1,12 +1,25 @@
 // Inspired from https://abhik-b.medium.com/cards-full-screen-expand-and-close-react-and-framer-motion-af0f5cf83f45
 // More information and animations: https://www.framer.com/api/motion/
+
 import {AnimateSharedLayout, motion} from 'framer-motion';
 import React, { useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 
+/**
+ * Expandable function taking one parameter value, representing the state of the object, open or not.
+ * useState react hook for setting a value to an object based on the state. In this case, the motion container is by default not opened, onClick handler uses the state to set the container to open or vice-versa.
+ * return an AnimateSharedLayout from framer-motion which enables animations between layouts.
+ * transition : duration(amount in seconds) it takes to the motion container transition between different states.
+ * animate: defines how the motion container will animate on transition. 
+ * scale: how the whole container scales on animation.
+ * rotate: how the whole container rotates on animation.
+ * whileHover: property to make the container scale within the given values whenever the motion container is hoovered.
+ */
+
 function Expandable({value}) {
     const [open,setOpen]=useState(false)
     return <AnimateSharedLayout>
+        <a href="https://github.com/Robert-Alexandru/From-AdobeXD-to-React/blob/main/src/components/expandable.js"><h2>Code Here</h2></a>
             {open?
             <Row>
                 <Col md={{ span: 4, offset: 5 }}>

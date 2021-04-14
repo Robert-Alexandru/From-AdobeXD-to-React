@@ -6,6 +6,7 @@ import { wrap } from "popmotion";
 import { images } from "./carousels-image-data";
 import { Container, Row, Col } from 'react-bootstrap';
 
+//custom object defining variants for carousel items. Defines direction, opacity, and z-index of items on entering the carousel, when on center of the carousel, or when exiting the carousel.
 const variants = {
   enter: (direction) => {
     return {
@@ -51,8 +52,22 @@ const swipePower = (offset, velocity) => {
     setPage([page + newDirection, newDirection]);
   };
 
+  /**
+    * Return a container containing a carousel.
+    * As from the original documentation: AnimatePresence allows components to animate out when they're removed from the React tree.
+    * Motion.img represents an animated object from framer motion(image) which is wrapped in the AnimatePresence object so the image can exit the animation properly.
+    * AnimatePresence takes 2 arguments here: initial state which is set to false by default and custom representing the direction using the state.
+    * key: takes the page index
+    * src: points to the image from (carousels-image-data.js exported at the top of the file). Takes an index defined above using the wrap function taking the length of the images array and page.
+    * initial variant: set the state of the motion image to enter on button click or drag and drop (see const variants above).
+    * animate variant: set the state of the motion image to animate and stay on the center (see const variants above).
+    * exit variant: set the state of the motion image on exiting the carousel (see const variants above).
+    * transition: define how the motion image performs the animation.
+    * drag, dragContraints, dragElastic, onDragEnd: Give the ability of drag and drop the motion image (or swipe) and define the pagination based on the swipe direction.
+    */
   return (
     <Container className="carousel">
+      <div><a href="https://github.com/Robert-Alexandru/From-AdobeXD-to-React/blob/main/src/components/carousels.js"><h5>Code Here</h5></a></div>
      <Row>
         <Col md={12}>
       <AnimatePresence classname="motion-image" initial={false} custom={direction}>
